@@ -20,7 +20,8 @@ function getRandomPassword(array, charsCount) {
 }
 
 // Eventlistener to generate passwords btn
-generateBtn.addEventListener("click", function () {
+generateBtn.addEventListener("click", function (e) {
+    e.preventDefault()
     const charsNum = charsNumEl.value;
     if (charsNum > 0 && charsNum <= 25) {
         passwordContainers.forEach((container) => {
